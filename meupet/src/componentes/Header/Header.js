@@ -14,6 +14,7 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    Image
 } from '@chakra-ui/react';
 import {
     HamburgerIcon,
@@ -21,12 +22,13 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
 } from '@chakra-ui/icons';
-
+import avatar from '../../assets/bicho-de-estimacao.png'
 export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
 
     return (
-        <Box>
+        <Box position={'sticky'}
+            top={"0"}>
             <Flex
                 bg={useColorModeValue('white', 'gray.800')}
                 color={useColorModeValue('gray.600', 'white')}
@@ -37,8 +39,7 @@ export default function WithSubnavigation() {
                 borderStyle={'solid'}
                 borderColor={useColorModeValue('gray.200', 'gray.900')}
                 align={'center'}
-                p={'sticky'}
-                top={0}>
+            >
                 <Flex
                     flex={{ base: 1, md: 'auto' }}
                     ml={{ base: -2 }}
@@ -57,9 +58,9 @@ export default function WithSubnavigation() {
                         textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
                         fontFamily={'heading'}
                         color={useColorModeValue('gray.800', 'white')}>
-                        Logo
+                        Meu Pet
                     </Text>
-
+                    <Image h={"35px"} name='Meu pet App' src={avatar} />
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                         <DesktopNav />
                     </Flex>
