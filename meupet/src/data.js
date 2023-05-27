@@ -6,6 +6,7 @@ export const animaisAdocao = [
       sexo: "femea",
       tipo: "cachorro",
       pelagem: "preta e branca",
+      porte: "Médio",
       dataNascimento: "27/10/2011",
       dataAcolhimento: '30/10/2012',
       vacinas: [{
@@ -26,6 +27,7 @@ export const animaisAdocao = [
       sexo: "macho",
       tipo: "cachorro",
       pelagem: "preta",
+      porte: "Médio",
       dataNascimento: "15/01/2016",
       dataAcolhimento: '15/01/2016',
       vacinas: [
@@ -54,6 +56,7 @@ export const animaisAdocao = [
       sexo: "femea",
       tipo: "cachorro",
       pelagem: "rajada",
+      porte: "Pequeno",
       dataNascimento: "27/10/2010",
       dataAcolhimento: '27/01/2011',
       vacinas: [{
@@ -78,6 +81,7 @@ export const animaisAdocao = [
       sexo: "femea",
       tipo: "cachorro",
       pelagem: "rajada",
+      porte: "Grande",
       dataNascimento: "27/10/2010",
       dataAcolhimento: '27/01/2011',
       vacinas: [{
@@ -94,6 +98,7 @@ export const animaisAdocao = [
       sexo: "femea",
       tipo: "cachorro",
       pelagem: "rajada",
+      porte: "Pequeno",
       dataNascimento: "15/03/2011",
       dataAcolhimento: '15/03/2012',
       vacinas: [{
@@ -115,6 +120,7 @@ export const animaisAdocao = [
       sexo: "femea",
       tipo: "gato",
       pelagem: "branca",
+      porte: "pequeno",
       dataNascimento: "15/03/2011",
       dataAcolhimento: '15/03/2012',
       vacinas: [{

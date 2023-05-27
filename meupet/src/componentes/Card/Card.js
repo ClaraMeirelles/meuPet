@@ -1,5 +1,5 @@
 import {
-    Badge,
+    Tag,
     Button,
     Center,
     Flex,
@@ -51,34 +51,23 @@ export default function Card({ pet }) {
                         textAlign={'center'}
                         color={useColorModeValue('gray.700', 'gray.400')}
                         px={3}>
-                        Actress, musician, songwriter and artist. PM for work inquires or
-                        <Link href={'#'} color={'blue.400'}>
-                            #tag
-                        </Link>
-                        me in your posts
+                        descrição bonitinha de como o pet é, mas curta
                     </Text>
                     <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
-                        <Badge
+                        <Tag
                             px={2}
                             py={1}
                             bg={useColorModeValue('gray.50', 'gray.800')}
                             fontWeight={'400'}>
-                            #art
-                        </Badge>
-                        <Badge
+                            {pet.sexo}
+                        </Tag>
+                        <Tag
                             px={2}
                             py={1}
                             bg={useColorModeValue('gray.50', 'gray.800')}
                             fontWeight={'400'}>
-                            #photography
-                        </Badge>
-                        <Badge
-                            px={2}
-                            py={1}
-                            bg={useColorModeValue('gray.50', 'gray.800')}
-                            fontWeight={'400'}>
-                            #music
-                        </Badge>
+                            porte {pet.porte.toLowerCase()}
+                        </Tag>
                     </Stack>
 
                     <Stack
@@ -92,27 +81,18 @@ export default function Card({ pet }) {
                             flex={1}
                             fontSize={'sm'}
                             rounded={'full'}
-                            _focus={{
-                                bg: 'gray.200',
-                            }}>
-                            Message
-                        </Button>
-                        <Button
-                            flex={1}
-                            fontSize={'sm'}
-                            rounded={'full'}
-                            bg={'blue.400'}
+                            bg={'#612096c7'}
                             color={'white'}
                             boxShadow={
-                                '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
+                                '0px 1px 25px -5px #612096, 0 10px 10px -5px #61209699'
                             }
                             _hover={{
-                                bg: 'blue.500',
+                                bg: '#612096',
                             }}
                             _focus={{
-                                bg: 'blue.500',
+                                bg: '#612096',
                             }}>
-                            Follow
+                            Mais detalhes
                         </Button>
                     </Stack>
                 </Stack>
