@@ -3,7 +3,7 @@ import SimpleSidebar from '../../componentes/Filtros/Filtros'
 import Card from '../../componentes/Card/Card'
 import { animaisAdocao } from '../../data'
 
-export default function Adocao() {
+export function Adocao() {
     return (
         <SimpleSidebar>
             <section>

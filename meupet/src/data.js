@@ -132,3 +132,64 @@ export const animaisAdocao = [
       idProtetora: "1232130"
    },
 ]
+
+export const meusPets = [
+   {
+      id: 0,
+      nome: "Shisha",
+      sexo: "femea",
+      tipo: "cachorro",
+      pelagem: "preta e bege",
+      raca: "srd",
+      porte: "Pequeno",
+      peso: 4.5,
+      dataNascimento: "27/10/2010",
+      dataAcolhimento: '30/10/2011',
+      vacinas: [{
+         nome: "V10",
+         data: "30/10/2011",
+         reforco: "30/10/2012"
+      }, {
+         nome: "Raiva",
+         data: "30/10/2011",
+         reforco: "30/10/2012"
+      }],
+      adocao: {
+         nome: "Clara",
+         id: 1,
+         endereco: "doasijdaosidjoasijdoasi",
+      },
+      vet: [{ nome: "Tati Evangelista", id: "1234", ultimaVisita: "21/09/2023", agendamento: "15/10/2023" }],
+      exames: false,
+      idProtetora: "1232130"
+   },
+   {
+      id: 0,
+      nome: "Ziah",
+      sexo: "macho",
+      tipo: "cachorro",
+      pelagem: "marrom",
+      raca: "srd",
+      porte: "Grande",
+      peso: 25,
+      dataNascimento: "27/10/2010",
+      dataAcolhimento: '30/10/2012',
+      vacinas: [{
+         nome: "V10",
+         data: "30/10/2011",
+         reforco: "30/10/2012"
+      }, {
+         nome: "Raiva",
+         data: "30/10/2011",
+         reforco: "30/10/2012"
+      }],
+      adocao: {
+         nome: "Clara",
+         id: 1,
+         endereco: "doasijdaosidjoasijdoasi",
+      },
+      vet: [{ nome: "Outro", id: "342483", ultimaVisita: "21/09/2023", agendamento: false }],
+      exames: false,
+      idProtetora: "1232130"
+   }
+]

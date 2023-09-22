@@ -23,7 +23,7 @@ import {
     ChevronRightIcon,
 } from '@chakra-ui/icons';
 import avatar from '../../assets/bicho-de-estimacao.png'
-export default function WithSubnavigation() {
+export default function Header() {
     const { isOpen, onToggle } = useDisclosure();
 
     return (

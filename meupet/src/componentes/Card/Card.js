@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 
 export default function Card({ pet }) {
-
+    const corTags = useColorModeValue('gray.50', 'gray.800')
     console.log(pet.adocao)
     return (
         <Center py={6}>
@@ -51,24 +51,25 @@ export default function Card({ pet }) {
                         textAlign={'center'}
                         color={useColorModeValue('gray.700', 'gray.400')}
                         px={3}>
-                        descrição bonitinha de como o pet é, mas curta
+                        {!pet.adocao ? "descrição bonitinha de como o pet é, mas curta" : pet.vacinas.map((vacina) => <> <strong>{vacina.nome}</strong> <br />Próxima: {vacina.reforco}<hr /></>)}
                     </Text>
-                    <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
-                        <Tag
-                            px={2}
-                            py={1}
-                            bg={useColorModeValue('gray.50', 'gray.800')}
-                            fontWeight={'400'}>
-                            {pet.sexo}
-                        </Tag>
-                        <Tag
-                            px={2}
-                            py={1}
-                            bg={useColorModeValue('gray.50', 'gray.800')}
-                            fontWeight={'400'}>
-                            porte {pet.porte.toLowerCase()}
-                        </Tag>
-                    </Stack>
+                    {!pet.adocao &&
+                        <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+                            <Tag
+                                px={2}
+                                py={1}
+                                bg={corTags}
+                                fontWeight={'400'}>
+                                {pet.sexo}
+                            </Tag>
+                            <Tag
+                                px={2}
+                                py={1}
+                                bg={corTags}
+                                fontWeight={'400'}>
+                                porte {pet.porte.toLowerCase()}
+                            </Tag>
+                        </Stack>}
 
                     <Stack
                         width={'100%'}
@@ -97,6 +98,6 @@ export default function Card({ pet }) {
                     </Stack>
                 </Stack>
             </Stack>
-        </Center>
+        </Center >
     );
 }
