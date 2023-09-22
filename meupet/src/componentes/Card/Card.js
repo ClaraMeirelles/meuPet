@@ -10,9 +10,19 @@ import {
     Text,
     useColorModeValue,
 } from '@chakra-ui/react';
+import { goToDetalheMeuPet } from '../../Routes/coordinator';
+import { useNavigate } from 'react-router-dom';
 
 export default function Card({ pet }) {
+    const navigate = useNavigate()
 
+    const corTags = useColorModeValue('gray.50', 'gray.800')
+    const corTexto = useColorModeValue('gray.700', 'gray.400')
+
+    const irParaDetalhes = () => {
+        // pet.tutor?.id === 
+        goToDetalheMeuPet(navigate, pet.id)
+    }
     console.log(pet.adocao)
     return (
         <Center py={6}>
@@ -47,28 +57,32 @@ export default function Card({ pet }) {
                     <Text fontWeight={600} color={'gray.500'} size="sm" mb={4}>
                         @{pet.idProtetora}
                     </Text>
-                    <Text
-                        textAlign={'center'}
-                        color={useColorModeValue('gray.700', 'gray.400')}
-                        px={3}>
-                        descrição bonitinha de como o pet é, mas curta
-                    </Text>
-                    <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
-                        <Tag
-                            px={2}
-                            py={1}
-                            bg={useColorModeValue('gray.50', 'gray.800')}
-                            fontWeight={'400'}>
-                            {pet.sexo}
-                        </Tag>
-                        <Tag
-                            px={2}
-                            py={1}
-                            bg={useColorModeValue('gray.50', 'gray.800')}
-                            fontWeight={'400'}>
-                            porte {pet.porte.toLowerCase()}
-                        </Tag>
-                    </Stack>
+
+                    {!pet.adocao ?
+                        <Text
+                            textAlign={'center'}
+                            color={corTexto}
+                            px={3}>
+                            "descrição bonitinha de como o pet é, mas curta"
+                        </Text> :
+                        pet.vacinas.map((vacina) => <><Text> <strong>{vacina.nome}</strong> <br />Próxima: {vacina.reforco}</Text></>)}
+                    {!pet.adocao &&
+                        <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+                            <Tag
+                                px={2}
+                                py={1}
+                                bg={corTags}
+                                fontWeight={'400'}>
+                                {pet.sexo}
+                            </Tag>
+                            <Tag
+                                px={2}
+                                py={1}
+                                bg={corTags}
+                                fontWeight={'400'}>
+                                porte {pet.porte.toLowerCase()}
+                            </Tag>
+                        </Stack>}
 
                     <Stack
                         width={'100%'}
@@ -91,12 +105,13 @@ export default function Card({ pet }) {
                             }}
                             _focus={{
                                 bg: '#612096',
-                            }}>
+                            }}
+                            onClick={irParaDetalhes}>
                             Mais detalhes
                         </Button>
                     </Stack>
                 </Stack>
             </Stack>
-        </Center>
+        </Center >
     );
 }

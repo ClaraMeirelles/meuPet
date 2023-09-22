@@ -1,12 +1,12 @@
 import { ChakraProvider } from '@chakra-ui/react'
-
-import WithSubnavigation from './componentes/Header/Header';
-import Adocao from './paginas/Adocao/Adocao';
+import { Adocao } from './paginas/Adocao/Adocao';
+import Router from './Routes/Router';
 function App() {
   return (
     <ChakraProvider>
-      <WithSubnavigation />
-      <Adocao />
+      <Router>
+        <Adocao />
+      </Router>
     </ChakraProvider>
   );
 }
