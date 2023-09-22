@@ -11,7 +11,7 @@ export default function Router() {
 
             <Routes>
                 <Route index element={<MeusPets />} />
-                <Route path="/adotar" element={<Adocao />} />
+                <Route path="/adotar" query={"pet"} element={<Adocao />} />
                 <Route path="/meu-pet/:id" element={<PetDetalhes />} />
                 <Route path="*" element={<h1>Deu ruim</h1>} />
             </Routes>

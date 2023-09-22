@@ -138,6 +138,7 @@ export const meusPets = [
       id: 0,
       nome: "Shisha",
       sexo: "femea",
+      tutorId: 1,
       tipo: "cachorro",
       pelagem: "preta e bege",
       raca: "srd",
@@ -166,6 +167,7 @@ export const meusPets = [
    {
       id: 0,
       nome: "Ziah",
+      tutorId: 1,
       sexo: "macho",
       tipo: "cachorro",
       pelagem: "marrom",
