@@ -23,6 +23,7 @@ import {
     ChevronRightIcon,
 } from '@chakra-ui/icons';
 import avatar from '../../assets/bicho-de-estimacao.png'
+import { goToAdotar } from '../../Routes/coordinator';
 export default function Header() {
     const { isOpen, onToggle } = useDisclosure();
 
@@ -254,12 +255,12 @@ const NAV_ITEMS = [
             {
                 label: 'Cães',
                 subLabel: '🐶🐶🐶🐶',
-                href: '#',
+                href: 'caes'
             },
             {
                 label: 'Gatos',
                 subLabel: ' 🐱 🐱 🐱 🐱',
-                href: '#',
+                href: 'gatos',
             },
         ],
     },
@@ -269,21 +270,21 @@ const NAV_ITEMS = [
             {
                 label: 'Cães',
                 subLabel: '🐶🐶🐶🐶',
-                href: '#',
+                href: 'caes',
             },
             {
                 label: 'Gatos',
                 subLabel: ' 🐱 🐱 🐱 🐱',
-                href: '#',
+                href: 'gatos',
             },
         ],
     },
     {
         label: 'Cadastrar um pet',
-        href: '#',
+        href: 'cadastrar',
     },
     {
         label: 'Meus Pets',
-        href: '#',
+        href: '/',
     },
 ];
