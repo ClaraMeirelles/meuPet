@@ -9,3 +9,7 @@ export const goToDetalheMeuPet = (navigate, id) => {
 export const goToHome = (navigate) => {
     navigate("/")
 }
+
+export const goToAdotarPetId = (navigate, id) => {
+    navigate(`/adotar/${id}`)
+}

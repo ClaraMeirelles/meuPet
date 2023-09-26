@@ -13,17 +13,12 @@ import {
 import { goToDetalheMeuPet } from '../../Routes/coordinator';
 import { useNavigate } from 'react-router-dom';
 
-export default function Card({ pet }) {
+export default function Card({ pet, trocarPagina }) {
     const navigate = useNavigate()
 
     const corTags = useColorModeValue('gray.50', 'gray.800')
     const corTexto = useColorModeValue('gray.700', 'gray.400')
 
-    const irParaDetalhes = () => {
-        // pet.tutor?.id === 
-        goToDetalheMeuPet(navigate, pet.id)
-    }
-    console.log(pet.adocao)
     return (
         <Center py={6}>
             <Stack
@@ -106,7 +101,7 @@ export default function Card({ pet }) {
                             _focus={{
                                 bg: '#612096',
                             }}
-                            onClick={irParaDetalhes}>
+                            onClick={() => trocarPagina(navigate, pet.id)}>
                             Mais detalhes
                         </Button>
                     </Stack>

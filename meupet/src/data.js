@@ -148,11 +148,13 @@ export const meusPets = [
       dataAcolhimento: '30/10/2011',
       vacinas: [{
          nome: "V10",
+         lote: "91238",
          data: "30/10/2011",
          reforco: "30/10/2012"
       }, {
          nome: "Raiva",
          data: "30/10/2011",
+         lote: "93238",
          reforco: "30/10/2012"
       }],
       adocao: {
@@ -161,8 +163,36 @@ export const meusPets = [
          endereco: "doasijdaosidjoasijdoasi",
       },
       vet: [{ nome: "Tati Evangelista", id: "1234", ultimaVisita: "21/09/2023", agendamento: "15/10/2023" }],
-      exames: false,
-      idProtetora: "1232130"
+      exames: [
+         {
+            nome: "sangue",
+            data: "13/09/2023",
+            resultados: "url"
+         }
+      ],
+      idProtetora: "1232130",
+      receitas: [
+         {
+            id: "9wq893",
+            diagnostico: "aaaaaaa",
+            ativo: true,
+            medicacao: [
+               {
+                  id: "12",
+                  nome: "aaaaaaaaa",
+                  ativo: true,
+                  posologia:
+                  {
+                     dose: 50,
+                     unidadeDose: "g",
+                     horas: 8,
+                     duracaoDias: 3,
+                     dataInicio: "10/02/2021"
+                  }
+               }],
+
+         }
+      ]
    },
    {
       id: 0,
