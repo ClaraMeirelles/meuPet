@@ -162,7 +162,17 @@ export const meusPets = [
          id: 1,
          endereco: "doasijdaosidjoasijdoasi",
       },
-      vet: [{ nome: "Tati Evangelista", id: "1234", ultimaVisita: "21/09/2023", agendamento: "15/10/2023" }],
+      vet: [
+         {
+            nome: "Tati Evangelista",
+            id: "1234",
+            ultimaVisita: "21/09/2023",
+            agendamento: "15/10/2023",
+            visitas: [
+               { data: "11/02/2022", motivo: "descrição" }
+            ]
+         }
+      ],
       exames: [
          {
             nome: "sangue",
