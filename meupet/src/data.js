@@ -143,7 +143,7 @@ export const meusPets = [
       pelagem: "preta e bege",
       raca: "srd",
       porte: "Pequeno",
-      peso: 4.5,
+      peso: [{ data: "11/02/2014", valor: 4.5 }],
       dataNascimento: "27/10/2010",
       dataAcolhimento: '30/10/2011',
       vacinas: [{
@@ -151,12 +151,38 @@ export const meusPets = [
          lote: "91238",
          data: "30/10/2011",
          reforco: "30/10/2012"
-      }, {
+      },
+      {
+         nome: "Raiva",
+         data: "30/10/2013",
+         lote: "93aaa238",
+         reforco: "30/10/2014"
+      },
+      {
          nome: "Raiva",
          data: "30/10/2011",
-         lote: "93238",
+         lote: "9323fsds8",
          reforco: "30/10/2012"
-      }],
+      },
+      {
+         nome: "Raiva",
+         data: "30/10/2011",
+         lote: "9323fafs8",
+         reforco: "30/10/2012"
+      },
+      {
+         nome: "Raiva",
+         data: "30/10/2011",
+         lote: "932dasd38",
+         reforco: "30/10/2012"
+      },
+      {
+         nome: "Raiva",
+         data: "30/10/2011",
+         lote: "9323dsdd8",
+         reforco: "30/10/2012"
+      },
+      ],
       adocao: {
          nome: "Clara",
          id: 1,
@@ -164,17 +190,34 @@ export const meusPets = [
       },
       vet: [
          {
-            nome: "Tati Evangelista",
+            nome: "Tati",
             id: "1234",
             ultimaVisita: "21/09/2023",
             agendamento: "15/10/2023",
             visitas: [
-               { data: "11/02/2022", motivo: "descrição" }
+               { data: "11/02/2022", motivo: "descrição do motivo do atendimento feito pela vet" },
+               { data: "11/02/2022", motivo: "descrição do motivo do atendimento feito pela vet" },
+               { data: "11/02/2022", motivo: "descrição do motivo do atendimento feito pela vet" },
+               { data: "11/02/2022", motivo: "descrição do motivo do atendimento feito pela vet" },
+               { data: "11/02/2022", motivo: "descrição" },
+               { data: "11/02/2022", motivo: "descrição" },
+               { data: "11/02/2022", motivo: "descrição" },
+               { data: "11/02/2022", motivo: "descrição" },
             ]
-         }
+         },
+         {
+            nome: "Aline",
+            id: "1dasiuh234",
+            ultimaVisita: "21/09/2019",
+            agendamento: false,
+            visitas: [
+               { data: "11/02/2022", motivo: "descrição do motivo do atendimento feito pela vet" },
+            ]
+         },
       ],
       exames: [
          {
+            id: "090w832",
             nome: "sangue",
             data: "13/09/2023",
             resultados: "url"
@@ -205,7 +248,7 @@ export const meusPets = [
       ]
    },
    {
-      id: 0,
+      id: 1,
       nome: "Ziah",
       tutorId: 1,
       sexo: "macho",
@@ -213,7 +256,23 @@ export const meusPets = [
       pelagem: "marrom",
       raca: "srd",
       porte: "Grande",
-      peso: 25,
+      peso: [
+         {
+            id: "dihasiuda",
+            data: "11/02/2014",
+            valor: 30
+         },
+         {
+            id: "-0912-13218098",
+            data: "15/08/2020",
+            valor: 23
+         },
+         {
+            id: "doasjdioasja",
+            data: "21/04/2023",
+            valor: 25
+         },
+      ],
       dataNascimento: "27/10/2010",
       dataAcolhimento: '30/10/2012',
       vacinas: [{

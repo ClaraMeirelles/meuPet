@@ -18,7 +18,27 @@ export default function Card({ pet, trocarPagina }) {
 
     const corTags = useColorModeValue('gray.50', 'gray.800')
     const corTexto = useColorModeValue('gray.700', 'gray.400')
-
+    const vacinas = []
+    let novaVacina = true
+    pet.vacinas.forEach((vacina) => {
+        vacinas.forEach((vacArray) => {
+            console.log(vacArray.nome === vacina.nome, vacArray.nome, vacina.nome)
+            if (vacArray.nome === vacina.nome) {
+                console.log("vacarray", +vacArray.data?.split("/").reverse().join("") > +vacina.data?.split("/").reverse().join(""))
+                if (+vacArray.data?.split("/").reverse().join("") > +vacina.data?.split("/").reverse().join("")) {
+                    vacina = vacArray
+                    novaVacina = false
+                    return
+                }
+            }
+        })
+        console.log({ novaVacina, vac: vacina.nome, vacinas })
+        if (novaVacina) {
+            console.log(vacina, pet.nome, "puxou")
+            vacinas.push(vacina)
+        }
+    })
+    console.log(vacinas)
     return (
         <Center py={6}>
             <Stack
@@ -60,7 +80,10 @@ export default function Card({ pet, trocarPagina }) {
                             px={3}>
                             "descrição bonitinha de como o pet é, mas curta"
                         </Text> :
-                        pet.vacinas.map((vacina) => <><Text> <strong>{vacina.nome}</strong> <br />Próxima: {vacina.reforco}</Text></>)}
+                        vacinas.map((vacina) => {
+                            // console.log("map visivel", pet.nome, vacina)
+                            return <Text key={vacina.nome + vacina.data}> <strong>{vacina.nome}</strong> <br />Próxima: {vacina.reforco}</Text>
+                        })}
                     {!pet.adocao &&
                         <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
                             <Tag
